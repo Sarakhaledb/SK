@@ -1,4 +1,4 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+
 
 24/3/2021
 Include the date you created this project and README file.
@@ -26,8 +26,13 @@ The oldest user (if available)
 The youngest user (if available)
 The most common birth year amongst users (if available)
 Finally, the user is prompted with the choice of restarting the program or not.
-### Files used
-Include the files used
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Project Data:
+
+chicago.csv - Stored in the data folder, the chicago.csv file is the dataset containing all bikeshare information for the city of Chicago provided by Udacity.
+
+new_york_city.csv - Dataset containing all bikeshare information for the city of New York provided by Udacity.
+
+washington.csv - Dataset containing all bikeshare information for the city of Washington provided by Udacity. Note: This does not include the 'Gender' or 'Birth Year' data.
+
+bikeshare.py 
