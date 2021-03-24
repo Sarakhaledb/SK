@@ -22,7 +22,7 @@ def check_input(input_str,input_type):
                     print("Sorry we were not able to get the name of the month to analyze data, Please input either 'all' to apply no month filter or january, february, ... , june")
                 if input_type==3:
                     print("Sorry we were not able to get the name of the day to analyze data, Please input either 'all' to apply no day filter or saturday, sunday, ... , friday")
-                
+
         except ValueError:
             print('Sorry Error Input')
     return input_read
@@ -37,7 +37,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # TO DO: get user input for city chicago, new york city,and washington. HINT: Use a while loop to handle invalid inputs
     city=check_input("Would you like to see the data for chicago, new york city or washington?",1)
     month=check_input("Which Month (all, january, ... june)?",2)
     day=check_input("Which day? (all, monday, tuesday, ... sunday)",3)
@@ -109,7 +109,7 @@ def station_stats(df):
     print(df['End Station'].mode()[0])
     group_field= df.groupby(['Start Station','End Station'])
     popular_combination_station = group_field.size().sort_values(ascending=False).head(1)
-    
+
     print('Most frequent combination of start station and end station trip:\n', popular_combination_station)
 
 
@@ -137,7 +137,7 @@ def trip_duration_stats(df):
 
 def user_stats(df, city):
     """Displays statistics on bikeshare users."""
- 
+
     print('\nCalculating User Stats...\n')
     start_time = time.time()
     print(df['User Type'].value_counts())
@@ -146,12 +146,12 @@ def user_stats(df, city):
         print(df['Birth Year'].mode()[0])
         print(df['Birth Year'].max())
         print(df['Birth Year'].min())
-        
-    
+
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
+
     def data(df):
         raw_data = 0
         while True:
@@ -166,7 +166,7 @@ def user_stats(df, city):
                     break
                 elif answer == 'no':
                     return
-     
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -175,12 +175,10 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df, city)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-        
+
 if __name__ == "__main__":
 	main()
-    
-    
